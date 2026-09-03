@@ -7,9 +7,10 @@ data class Post(
     val date: LocalDateTime = LocalDateTime.now(),
     val text: String = "",
     val likes: Likes = Likes(),
-    val replyPostId: Long = -1,
+    val replyPostId: Long? = null,
     val viewsCount: Long = 0,
     val postType: PostType = PostType.POST,
+    val signerId: Long? = null,
     val canDelete: Boolean = true,
     val canEdit: Boolean = true,
     val isFavorite: Boolean = false
